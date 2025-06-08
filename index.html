@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lernplattform</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#3f51b5">
+
+
+  <link rel="stylesheet" href="styles/style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vexflow@4.2.2/build/cjs/vexflow.js"></script>
+
+  
+</head>
+
+
+<body>
+  <header>
+    <h1>Quiz-Lernplattform</h1>
+  </header>
+  <main>
+    <div class="aufgaben-grid">
+      <button>Mathematik</button>
+      <button>Webtechnologie</button>
+      <button>Allgemeinwissen</button>
+      <button>Noten lernen</button>
+      <button>Externe Aufgaben</button>
+    </div>
+    
+    <div id="quiz-bereich" style="display: none;">
+      <div id="fortschritt-wrapper">
+        <div id="fortschritt-bar"></div>
+      </div>
+
+      <h2 id="quiz-frage">Frage wird geladen...</h2>
+      <div id="antwort-buttons"></div>
+    </div>
+
+    <div id="statistik-bereich" style="display: none;"></div>
+
+
+  </main>
+  <script type="module" src="scripts/presenter.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('service Worker registriert'))
+        .catch(err => console.error('service Worker Fehler', err));
+    }
+    </script>
+
+</body>
+</html> 
