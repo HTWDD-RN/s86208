@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  margin: 0;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.aufgaben-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+button {
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e6f0ff;
+}
+#fortschritt-wrapper{
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+#fortschritt-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+#quiz-bereich {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quiz-frage {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-weight: bold;
+}
+
+
+#antwort-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+
+#antwort-buttons button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: white;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#antwort-buttons button:hover {
+  background-color: #e6f0ff;
+}
+.piano {
+  position: relative;
+  display: flex;
+  height: 150px;
+  margin-top: 1rem;
+  width: 400px;
+}
+
+.white-key {
+  width: 50px;
+  height: 150px;
+  background: white;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.white-key:hover {
+  background: #f0f0f0;
+}
+
+.black-key {
+  width: 30px;
+  height: 90px;
+  background: black;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+}
+.black-key:hover {
+  background-color: #444;
+}
+
+
+#antwort-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
